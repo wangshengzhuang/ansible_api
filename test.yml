@@ -1,0 +1,15 @@
+- name: get hostname
+  hosts: group1
+  remote_user: root
+  gather_facts: yes
+  tasks:
+   - name: hostname
+     shell:  hostname
+
+- name: get data
+  hosts: group2
+  remote_user: root
+  gather_facts: yes
+  tasks:
+   - name: date
+     shell: date
